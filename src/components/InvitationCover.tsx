@@ -37,60 +37,77 @@ export default function InvitationCover({ onOpen }: Props) {
           initial={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-md"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-3xl"
         >
-          {/* Background image - User's 2nd image */}
+          {/* Background image heavily blurred */}
           <motion.div
             initial={{ scale: 1.1, opacity: 0 }}
-            animate={{ scale: 1, opacity: 0.8 }}
+            animate={{ scale: 1, opacity: 0.5 }}
             transition={{ duration: 3, ease: "easeOut" }}
-            className="absolute inset-0 bg-[url('/gallery/couple_background.jpeg')] bg-cover bg-center"
+            className="absolute inset-0 bg-[url('/gallery/couple_background.jpeg')] bg-cover bg-center blur-md"
           />
 
           <motion.div
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="relative z-10 bg-[#fffaf0] p-10 md:p-14 rounded-3xl shadow-2xl max-w-md w-[90%] text-center overflow-hidden"
+            className="relative z-10 bg-[#FDFBF7] p-10 md:p-14 rounded-[2rem] shadow-2xl max-w-md w-[90%] text-center overflow-hidden border border-[#E8DCC4]"
+            style={{
+              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 0 60px rgba(179, 139, 89, 0.05)"
+            }}
           >
-            {/* Floral Decorative Corners - The user can place these PNGs in public/gallery/ */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[url('/gallery/floral-corner-tr.png')] bg-contain bg-no-repeat opacity-90 mix-blend-multiply pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-[url('/gallery/floral-corner-bl.png')] bg-contain bg-no-repeat opacity-90 mix-blend-multiply pointer-events-none" />
+            {/* Floral Decorative Corners using SVGs for now so they don't 404 */}
+            <div className="absolute top-0 right-0 w-32 h-32 opacity-80 pointer-events-none transform translate-x-4 -translate-y-4">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="80" cy="20" r="30" fill="#F4D3D3" filter="blur(8px)"/>
+                <circle cx="60" cy="40" r="20" fill="#E8B4B8" filter="blur(4px)"/>
+                <path d="M70 10 Q90 30 60 50" stroke="#C49A74" strokeWidth="1.5" fill="none"/>
+              </svg>
+            </div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 opacity-80 pointer-events-none transform -translate-x-4 translate-y-4">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="80" r="30" fill="#F4D3D3" filter="blur(8px)"/>
+                <circle cx="40" cy="60" r="20" fill="#E8B4B8" filter="blur(4px)"/>
+                <path d="M30 90 Q10 70 40 50" stroke="#C49A74" strokeWidth="1.5" fill="none"/>
+              </svg>
+            </div>
 
             {/* Top decorative heart */}
-            <div className="flex items-center justify-center gap-4 mb-4 relative z-10">
-              <div className="h-[1px] w-10 bg-[#a88252]/40" />
-              <Heart className="w-6 h-6 text-[#a88252] fill-transparent" strokeWidth={1.5} />
-              <div className="h-[1px] w-10 bg-[#a88252]/40" />
+            <div className="flex items-center justify-center gap-4 mb-6 relative z-10">
+              <div className="h-[1px] w-12 bg-[#B38B59]/30" />
+              <Heart className="w-5 h-5 text-[#B38B59]" strokeWidth={2} fill="none" />
+              <div className="h-[1px] w-12 bg-[#B38B59]/30" />
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-display text-[#8c7355] mb-4 relative z-10">Welcome!</h2>
+            <h2 className="text-4xl md:text-5xl font-display text-[#8c6b45] mb-4 relative z-10">Welcome!</h2>
 
-            <div className="flex justify-center mb-6 relative z-10">
-              <div className="w-16 h-[1px] bg-[#a88252]/30" />
+            <div className="flex items-center justify-center gap-2 mb-8 relative z-10">
+              <div className="h-[1px] w-16 bg-[#B38B59]/20" />
+              <div className="w-2 h-2 rounded-full border border-[#B38B59]/30" />
+              <div className="h-[1px] w-16 bg-[#B38B59]/20" />
             </div>
 
-            <p className="text-xs md:text-sm uppercase tracking-widest text-[#8c7355]/80 mb-8 font-semibold relative z-10">
+            <p className="text-xs md:text-sm uppercase tracking-[0.15em] text-[#8c6b45]/80 mb-8 font-medium relative z-10 leading-relaxed">
               Please let us know your name<br />before you continue
             </p>
 
             <div className="relative mb-8 z-10">
-              <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#8c7355]/50" />
+              <User className="absolute left-5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8c6b45]/60" strokeWidth={1.5} />
               <input
                 type="text"
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}
                 placeholder="Enter your name"
-                className="w-full bg-transparent border border-[#d4c4b7] rounded-xl py-4 pl-12 pr-4 text-[#8c7355] placeholder:text-[#8c7355]/40 focus:outline-none focus:border-[#8c7355] focus:ring-1 focus:ring-[#8c7355] transition-all"
+                className="w-full bg-[#FDFBF7] border border-[#d4c4b7] rounded-xl py-4 pl-12 pr-4 text-[#8c6b45] placeholder:text-[#8c6b45]/40 focus:outline-none focus:border-[#B38B59] focus:ring-1 focus:ring-[#B38B59] transition-all font-light"
               />
             </div>
 
             <button
               onClick={handleOpen}
               disabled={!nameInput.trim()}
-              className="relative z-10 bg-[#a88252] text-white px-12 py-3 rounded-full uppercase tracking-widest text-sm hover:bg-[#8c7355] disabled:opacity-50 disabled:cursor-not-allowed transition-all inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105"
+              className="relative z-10 bg-[#B38B59] text-white px-12 py-3.5 rounded-full uppercase tracking-widest text-sm hover:bg-[#9c774a] disabled:opacity-50 disabled:cursor-not-allowed transition-all inline-flex items-center justify-center gap-3 shadow-md hover:shadow-lg hover:scale-[1.02]"
             >
-              Enter <Heart className="w-4 h-4" />
+              Enter <Heart className="w-4 h-4" strokeWidth={1.5} fill="none" />
             </button>
           </motion.div>
         </motion.div>
