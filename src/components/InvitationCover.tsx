@@ -37,14 +37,14 @@ export default function InvitationCover({ onOpen }: Props) {
           initial={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-3xl"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-lg"
         >
           {/* Background image - User's 2nd image */}
           <motion.div
             initial={{ scale: 1.1, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.8 }}
             transition={{ duration: 3, ease: "easeOut" }}
-            className="absolute inset-0 bg-[url('/gallery/pop_up_image.png')] bg-cover bg-center blur-md"
+            className="absolute inset-0 bg-[url('/gallery/pop_up_image.png')] bg-cover bg-center blur-sm"
           />
 
           <motion.div
