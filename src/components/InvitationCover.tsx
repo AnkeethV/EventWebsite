@@ -39,12 +39,12 @@ export default function InvitationCover({ onOpen }: Props) {
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-3xl"
         >
-          {/* Background image heavily blurred */}
+          {/* Background image - User's 2nd image */}
           <motion.div
             initial={{ scale: 1.1, opacity: 0 }}
-            animate={{ scale: 1, opacity: 0.5 }}
+            animate={{ scale: 1, opacity: 0.8 }}
             transition={{ duration: 3, ease: "easeOut" }}
-            className="absolute inset-0 bg-[url('/gallery/couple_background.jpeg')] bg-cover bg-center blur-md"
+            className="absolute inset-0 bg-[url('/gallery/pop_up_image.png')] bg-cover bg-center blur-md"
           />
 
           <motion.div
@@ -56,7 +56,7 @@ export default function InvitationCover({ onOpen }: Props) {
               boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 0 60px rgba(179, 139, 89, 0.05)"
             }}
           >
-            {/* Floral Decorative Corners using SVGs for now so they don't 404 */}
+            {/* Floral Decorative Corners using SVGs so they don't break if images are missing */}
             <div className="absolute top-0 right-0 w-32 h-32 opacity-80 pointer-events-none transform translate-x-4 -translate-y-4">
               <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="80" cy="20" r="30" fill="#F4D3D3" filter="blur(8px)"/>
