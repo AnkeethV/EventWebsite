@@ -44,7 +44,7 @@ export default function InvitationCover({ onOpen }: Props) {
             initial={{ scale: 1.1, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.8 }}
             transition={{ duration: 3, ease: "easeOut" }}
-            className="absolute inset-0 bg-[url('/gallery/pop_up_image.png')] bg-cover bg-center blur-md"
+            className="absolute inset-0 bg-[url('/gallery/pop_up_image.png')]"
           />
 
           <motion.div
@@ -59,16 +59,16 @@ export default function InvitationCover({ onOpen }: Props) {
             {/* Floral Decorative Corners using SVGs so they don't break if images are missing */}
             <div className="absolute top-0 right-0 w-32 h-32 opacity-80 pointer-events-none transform translate-x-4 -translate-y-4">
               <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="80" cy="20" r="30" fill="#F4D3D3" filter="blur(8px)"/>
-                <circle cx="60" cy="40" r="20" fill="#E8B4B8" filter="blur(4px)"/>
-                <path d="M70 10 Q90 30 60 50" stroke="#C49A74" strokeWidth="1.5" fill="none"/>
+                <circle cx="80" cy="20" r="30" fill="#F4D3D3" filter="blur(8px)" />
+                <circle cx="60" cy="40" r="20" fill="#E8B4B8" filter="blur(4px)" />
+                <path d="M70 10 Q90 30 60 50" stroke="#C49A74" strokeWidth="1.5" fill="none" />
               </svg>
             </div>
             <div className="absolute bottom-0 left-0 w-32 h-32 opacity-80 pointer-events-none transform -translate-x-4 translate-y-4">
               <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="80" r="30" fill="#F4D3D3" filter="blur(8px)"/>
-                <circle cx="40" cy="60" r="20" fill="#E8B4B8" filter="blur(4px)"/>
-                <path d="M30 90 Q10 70 40 50" stroke="#C49A74" strokeWidth="1.5" fill="none"/>
+                <circle cx="20" cy="80" r="30" fill="#F4D3D3" filter="blur(8px)" />
+                <circle cx="40" cy="60" r="20" fill="#E8B4B8" filter="blur(4px)" />
+                <path d="M30 90 Q10 70 40 50" stroke="#C49A74" strokeWidth="1.5" fill="none" />
               </svg>
             </div>
 
