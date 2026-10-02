@@ -37,41 +37,25 @@ export default function InvitationCover({ onOpen }: Props) {
           initial={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-3xl"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-md"
         >
           {/* Background image - User's 2nd image */}
           <motion.div
             initial={{ scale: 1.1, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.8 }}
             transition={{ duration: 3, ease: "easeOut" }}
-            className="absolute inset-0 bg-[url('/gallery/pop_up_image.png')]"
+            className="absolute inset-0 bg-[url('/gallery/pop_up_image.png')] bg-cover bg-center"
           />
 
           <motion.div
             initial={{ opacity: 0, y: 30, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="relative z-10 bg-[#FDFBF7] p-10 md:p-14 rounded-[2rem] shadow-2xl max-w-md w-[90%] text-center overflow-hidden border border-[#E8DCC4]"
+            className="relative z-10 bg-[url('/gallery/pop-uppage.png')] bg-cover bg-center p-10 md:p-14 rounded-3xl shadow-2xl max-w-md w-[90%] text-center overflow-hidden border border-[#E8DCC4]"
             style={{
-              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 0 60px rgba(179, 139, 89, 0.05)"
+              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
             }}
           >
-            {/* Floral Decorative Corners using SVGs so they don't break if images are missing */}
-            <div className="absolute top-0 right-0 w-32 h-32 opacity-80 pointer-events-none transform translate-x-4 -translate-y-4">
-              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="80" cy="20" r="30" fill="#F4D3D3" filter="blur(8px)" />
-                <circle cx="60" cy="40" r="20" fill="#E8B4B8" filter="blur(4px)" />
-                <path d="M70 10 Q90 30 60 50" stroke="#C49A74" strokeWidth="1.5" fill="none" />
-              </svg>
-            </div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 opacity-80 pointer-events-none transform -translate-x-4 translate-y-4">
-              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="80" r="30" fill="#F4D3D3" filter="blur(8px)" />
-                <circle cx="40" cy="60" r="20" fill="#E8B4B8" filter="blur(4px)" />
-                <path d="M30 90 Q10 70 40 50" stroke="#C49A74" strokeWidth="1.5" fill="none" />
-              </svg>
-            </div>
-
             {/* Top decorative heart */}
             <div className="flex items-center justify-center gap-4 mb-6 relative z-10">
               <div className="h-[1px] w-12 bg-[#B38B59]/30" />
@@ -98,7 +82,7 @@ export default function InvitationCover({ onOpen }: Props) {
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}
                 placeholder="Enter your name"
-                className="w-full bg-[#FDFBF7] border border-[#d4c4b7] rounded-xl py-4 pl-12 pr-4 text-[#8c6b45] placeholder:text-[#8c6b45]/40 focus:outline-none focus:border-[#B38B59] focus:ring-1 focus:ring-[#B38B59] transition-all font-light"
+                className="w-full bg-[#FDFBF7]/80 border border-[#d4c4b7] rounded-xl py-4 pl-12 pr-4 text-[#8c6b45] placeholder:text-[#8c6b45]/40 focus:outline-none focus:border-[#B38B59] focus:ring-1 focus:ring-[#B38B59] transition-all font-light"
               />
             </div>
 
