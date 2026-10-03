@@ -44,7 +44,7 @@ export default function InvitationCover({ onOpen }: Props) {
             initial={{ scale: 1.1, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.8 }}
             transition={{ duration: 3, ease: "easeOut" }}
-            className="absolute inset-0 bg-[url('/gallery/pop_up_image.png')] bg-cover bg-center blur-sm"
+            className="absolute inset-0 bg-[url('/gallery/pop_up_image.png')] bg-cover bg-center backdrop-blur-sm blur-[2px]"
           />
 
           <motion.div

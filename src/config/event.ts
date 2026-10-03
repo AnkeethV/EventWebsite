@@ -26,10 +26,6 @@ export const eventConfig: EventConfig = {
   },
   schedule: [
     {
-      title: "Haldi",
-      image: "/gallery/Haldi.png"
-    },
-    {
       title: "Wedding Ceremony",
       image: "/gallery/phereweddingceremony.png"
     },
@@ -46,7 +42,6 @@ export const eventConfig: EventConfig = {
     ],
   },
   gallery: [
-    { src: "/gallery/Haldi.png", alt: "Haldi" },
     { src: "/gallery/ringceremonyengagement.png", alt: "Ring Ceremony" },
     { src: "/gallery/phereweddingceremony.png", alt: "Wedding Ceremony" },
     { src: "/gallery/poolpartyside.png", alt: "Pool Party" },

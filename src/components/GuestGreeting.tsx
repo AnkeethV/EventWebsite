@@ -17,7 +17,7 @@ export default function GuestGreeting() {
           {eventConfig.greeting.prefix}
         </span>
         <h2 className="text-4xl md:text-5xl font-display text-foreground mt-2 mb-6">
-          {displayName},
+          {displayName} Family,
         </h2>
       </div>
       <p className="text-lg md:text-xl leading-relaxed text-foreground/80 font-light max-w-2xl mx-auto">
