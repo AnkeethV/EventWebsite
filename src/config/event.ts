@@ -18,10 +18,10 @@ export const eventConfig: EventConfig = {
   dateTime: "2026-10-30T00:00:00+05:30",
   timezone: "Asia/Kolkata",
   venue: {
-    name: "Pydah Venkata Chalapati Kalyana Mandapam",
+    name: "Pydah Chalamayya Srinivasa Kalyana Mandapam",
     address: "Kakinada, Andhra Pradesh",
-    mapUrl: "https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Pydah+Venkata+Chalapati+Kalyana+Mandapam,+Kakinada,+Andhra+Pradesh&t=&z=14&ie=UTF8&iwloc=B&output=embed",
-    directionsUrl: "https://tinyurl.com/4yx33hzu",
+    mapUrl: "https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Pydah+Chalamayya+Srinivasa+Kalyana+Mandapam,+Kakinada,+Andhra+Pradesh&t=&z=14&ie=UTF8&iwloc=B&output=embed",
+    directionsUrl: "https://www.google.com/maps/place/Pydah+Chalamayya+Srinivasa+Kalyana+Mandapam/@16.9503081,82.2290369,17z/data=!4m14!1m7!3m6!1s0x3a382765a5b420ad:0x90d1156d5009e411!2sPydah+Chalamayya+Srinivasa+Kalyana+Mandapam!8m2!3d16.950303!4d82.2316118!16s%2Fg%2F11fj9_ys55!3m5!1s0x3a382765a5b420ad:0x90d1156d5009e411!8m2!3d16.950303!4d82.2316118!16s%2Fg%2F11fj9_ys55?hl=en-GB&entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D",
     image: "/gallery/background_image.jpeg"
   },
   schedule: [
